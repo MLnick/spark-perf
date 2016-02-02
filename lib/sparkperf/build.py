@@ -64,9 +64,9 @@ def make_spark_distribution(
         # Spark on the same machines and using standalone mode, it should be safe to
         # disable this warning:
         if is_yarn_mode:
-            run_cmd("./make-distribution.sh --skip-java-test -Pyarn " + additional_make_distribution_args)
+            run_cmd("./make-distribution.sh -Pyarn " + additional_make_distribution_args)
         else:
-            run_cmd("./make-distribution.sh --skip-java-test " + additional_make_distribution_args)
+            run_cmd("./make-distribution.sh " + additional_make_distribution_args)
 
 
 def copy_configuration(conf_dir, target_dir):
